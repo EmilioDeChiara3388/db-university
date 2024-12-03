@@ -16,3 +16,48 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - esami
 - studenti
 
+## Dipartimenti: table structure
+- id | BIGINT - AI - PK - NOTNULL
+- id_corsi_di_laurea
+- nome | VARCHAR (50) - NOTNULL
+- indirizzo | VARCHAR () - NULL
+
+
+## corsi_di_laurea: table structure
+- id | BIGINT - AI - PK - NOTNULL
+- id_dipartimento
+- nome | VARCHAR (50) - NOTNULL
+- durata | VARCHAR(20)
+
+
+## corsi: table structure
+- id | BIGINT - AI - PK - NOTNULL
+- id_insegnanti
+- nome | VARCHAR (50) - NOTNULL
+- crediti | TINYINT - NOTNULL
+- appelli_esami | DATE - NULL - DEFAULT("da definire")
+
+## insegnanti: table structure
+- id | BIGINT - AI - PK - NOTNULL
+- id_corso
+- id_esami
+- nome | VARCHAR (50) - NOTNULL
+- cognome | VARCHAR (50) - NOTNULL
+
+## esami: table structure
+- id | BIGINT - AI - PK - NOTNULL
+- id_insegnante
+- nome | VARCHAR (50) - NOTNULL
+- crediti | TINYINT - NOTNULL
+- appelli_esame | DATE - NULL - DEFAULT("da definire")
+
+## studenti: table structure
+- id | BIGINT - AI - PK - NOTNULL
+- id_corso_di_laurea
+- matricola | VARCHAR(12)
+- nome | VARCHAR (50) - NOTNULL
+- cognome | VARCHAR (50) - NOTNULL
+- data_di_nascita | DATE - NOTNULL
+
+
+
