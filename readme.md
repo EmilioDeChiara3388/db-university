@@ -31,8 +31,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 
 ## corsi: table structure
 - id | BIGINT - AI - PK - NOTNULL
-- id_corsi_di_laurea
-- id_insegnanti
+- id_corso_di_laurea
 - id_appello_esame
 - nome | VARCHAR (50) - NOTNULL
 - crediti | TINYINT - NOTNULL
@@ -45,10 +44,11 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - nome | VARCHAR (50) - NOTNULL
 - cognome | VARCHAR (50) - NOTNULL
 
-## appello_esami: table structure
+## appelli_esami: table structure
 - id | BIGINT - AI - PK - NOTNULL
 - id_insegnante
 - id_corso
+- id_studente
 - data | DATE - NULL - DEFAULT("da definire")
 
 ## studenti: table structure
@@ -58,7 +58,6 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - nome | VARCHAR (50) - NOTNULL
 - cognome | VARCHAR (50) - NOTNULL
 - data_di_nascita | DATE - NOTNULL
-- voto_esame | TINYINT | NOTNULL
 
 
 
