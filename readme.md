@@ -48,7 +48,6 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - id | BIGINT - AI - PK - NOTNULL
 - id_insegnante
 - id_corso
-- id_studente
 - data | DATE - NULL - DEFAULT("da definire")
 
 ## studenti: table structure
