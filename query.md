@@ -54,3 +54,8 @@ VALUES ("43", "Samuel", "Beckett", "1921-05-13", "BCKSMA21E13G342C", "2007-07-10
 UPDATE `teachers`
 SET `office_number` = "126"
 WHERE `id`="58";
+
+
+11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
+DELETE FROM `students`
+WHERE `id`="5001";
